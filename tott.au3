@@ -3,7 +3,7 @@
 ;   12:19PM -- 26/12/2017
 ; The 'cryptlib.au3' file is a combination of FileConstants.au3 and Crypt.au3
 
-;TODO : check if the variable that is handling the encryption works : debug code @ 267 // continue there 
+;NOTE : Remove the message box library before release
 ;TODO : AutoIt can only handle 4000 > char in lines make sure given key length doesn't exceed or use _ to create continuation.
 
 #NoTrayIcon
@@ -116,12 +116,12 @@ ElseIf $Cmdline[1] = "--load" Then
   EndIf
 
   coutw("Checking crypto library... ")
-  If FileExists($tmpdir & "\Include\cryptlib.au3") Then
+  If FileExists($tmpdir & "\lib\cryptlib.au3") Then
     coutl("OK!")
   Else
     coutw("Dropping... ")
-    DirCreate($tmpdir & "\Include")
-    If FileInstall("lib\cryptlib.au3", $tmpdir & "\Include\cryptlib.au3") Then
+    DirCreate($tmpdir & "\lib")
+    If FileInstall("lib\cryptlib.au3", $tmpdir & "\lib\cryptlib.au3") Then
       coutl("DONE!")
     Else
       coutl("FAILED!")
@@ -271,7 +271,7 @@ Func phase1()
 
   coutw("Writing script... ")
   Local $chunk
-  $chunk = '#NoTrayIcon' & @crlf & '#include <cryptlib.au3>' & @crlf & 'Global $filename = "' & $execflnm & '"' & @crlf & 'Global $finalargs = ""' & @crlf & 'Global $key = "' & $genkey & '"' & @crlf & 'Global $algo = ' & $argencrypt & @crlf & 'If $Cmdline[0] > 0 Then' & @crlf & 'For $i = 1 to Ubound($Cmdline) - 1' & @crlf & 'If $finalargs = "" Then' & @crlf & '$finalargs = $Cmdline[1]' & @crlf & 'Else' & @crlf & '$finalargs &= " " & $Cmdline[$i]' & @crlf & 'EndIf' & @crlf & 'Next' & @crlf & 'EndIf' & @crlf & 'If FileExists(@TempDir & "\" & $filename & ".exe") = False Then' & @crlf & 'FileInstall("$tmp._tot", @TempDir & "\" & $filename & "._tot", 1)' & @crlf & '_Crypt_DecryptFile(@TempDir & "\" & $filename & "._tot", @TempDir & "\" & $filename & ".exe", $key, $algo)' & @crlf & 'execfile()' & @crlf & 'Else' & @crlf & 'execfile()' & @crlf & 'EndIf' & @crlf & 'Func execfile()' & @crlf & 'ShellExecute(@TempDir & "\" & $filename & ".exe", $finalargs)' & @crlf & 'EndFunc'
+  $chunk = '#NoTrayIcon' & @crlf & '#include <lib\cryptlib.au3>' & @crlf & 'Global $filename = "' & $execflnm & '"' & @crlf & 'Global $finalargs = ""' & @crlf & 'Global $key = "' & $genkey & '"' & @crlf & 'Global $algo = ' & $argencrypt & @crlf & 'If $Cmdline[0] > 0 Then' & @crlf & 'For $i = 1 to Ubound($Cmdline) - 1' & @crlf & 'If $finalargs = "" Then' & @crlf & '$finalargs = $Cmdline[1]' & @crlf & 'Else' & @crlf & '$finalargs &= " " & $Cmdline[$i]' & @crlf & 'EndIf' & @crlf & 'Next' & @crlf & 'EndIf' & @crlf & 'If FileExists(@TempDir & "\" & $filename & ".exe") = False Then' & @crlf & 'FileInstall("$tmp._tot", @TempDir & "\" & $filename & "._tot", 1)' & @crlf & '_Crypt_DecryptFile(@TempDir & "\" & $filename & "._tot", @TempDir & "\" & $filename & ".exe", $key, $algo)' & @crlf & 'execfile()' & @crlf & 'Else' & @crlf & 'execfile()' & @crlf & 'EndIf' & @crlf & 'Func execfile()' & @crlf & 'ShellExecute(@TempDir & "\" & $filename & ".exe", $finalargs)' & @crlf & 'EndFunc'
   If $reqadmn Then $chunk = "#RequireAdmin" & @crlf & $chunk
   coutw("Creating file handler... ")
   Local $sdgvsr = FileOpen($tmpdir & "\payload.au3", 2)
@@ -294,9 +294,13 @@ Func phase1()
   EndIf
 
   coutw("Compiling...")
-  Local $comarg = '/in "payload.au3"' & '" /out "' & $argfileout & '" /comp 4 /pack'
+  Local $comarg = '/in payload.au3' & ' /out "' & $argfileout & '" /comp 4 /pack'
+  msgbox(0, "", $comarg)
   If $argico = "" = False Then $comarg &= ' /ico "' & $argico & '"'
-  MsgBox(0, '', $comarg)
+  ShellExecute($tmpdir & "\aicompiler.exe", $comarg)
+  If $hndlreturn = 0 Then
+    coutl("Complete!")
+  EndIf
 EndFunc
 
 Func stgenkey($length)
