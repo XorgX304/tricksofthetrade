@@ -2,7 +2,7 @@
 ### <i>Crypto File Dropper to bypass file detection.</i>
 ---
 ##### <b>Developed by <i>TRAGENALPHA</i></b> <img src="https://raw.githubusercontent.com/tragenalpha/tragenalpha.github.io/master/flare001.png"/>
-###### <pre><bear> Softwares </trap> (c) 2018</pre>
+###### <bear> Softwares </trap> (c) 2018
 
 ##### Software is licensed under the <i><b>dbad Public License</b></i>.
 ###### More information: <i><a href="https://www.dbad-license.org/"> https://www.dbad-license.org/</a></i>
