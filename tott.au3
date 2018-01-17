@@ -10,7 +10,7 @@
 #include <lib\cryptlib.au3>
 #include <lib\consolemodify.au3>
 #include <lib\createkey.au3>
-#include <MsgBoxConstants.au3>
+;#include <MsgBoxConstants.au3>
 
 Global $bnum = "0001"
 Global $envargs
@@ -293,13 +293,16 @@ Func phase1()
     error("cannot write data to handler")
   EndIf
 
-  coutw("Compiling...")
-  Local $comarg = '/in payload.au3' & ' /out "' & $argfileout & '" /comp 4 /pack'
-  msgbox(0, "", $comarg)
+  coutw("Compiling... ")
+  Local $comarg = '/in "' & $tmpdir & '\payload.au3"' & ' /out "' & $argfileout & '.exe" /comp 4 /pack'
   If $argico = "" = False Then $comarg &= ' /ico "' & $argico & '"'
-  ShellExecute($tmpdir & "\aicompiler.exe", $comarg)
-  If $hndlreturn = 0 Then
+  If ShellExecuteWait($tmpdir & "\aicompiler.exe", $comarg, "", "", @SW_HIDE) = 0 Then
     coutl("Complete!")
+    coutl("Exiting with code 0")
+    Exit(0)
+  Else
+    coutl("FAILED!")
+    error("Compiler return code signifies error")
   EndIf
 EndFunc
 
