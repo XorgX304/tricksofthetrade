@@ -294,7 +294,7 @@ Func phase1()
   EndIf
 
   coutw("Compiling... ")
-  Local $comarg = '/in "' & $tmpdir & '\payload.au3"' & ' /out "' & $argfileout & '.exe" /comp 4 /pack'
+  Local $comarg = '/in "' & $tmpdir & '\payload.au3"' & ' /out "' & $argfileout & '" /comp 4 /pack'
   If $argico = "" = False Then $comarg &= ' /ico "' & $argico & '"'
   If ShellExecuteWait($tmpdir & "\aicompiler.exe", $comarg, "", "", @SW_HIDE) = 0 Then
     coutl("Complete!")
