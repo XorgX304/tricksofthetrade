@@ -1,5 +1,7 @@
 ## Tricks of the Trade - <i>Crypto File Dropper to bypass file detection.</i>
 ---
+##### <a href="https://github.com/tragenalpha/tricksofthetrade/releases"> Looking for binaries? </a>
+---
 ##### <b>Developed by TRAGENALPHA</b> <img src="https://raw.githubusercontent.com/tragenalpha/tragenalpha.github.io/master/flare002.png"/> | tragenalpha@protonmail.com
 ###### //beartrap Softwares (c) 2018
 
