@@ -22,7 +22,7 @@
 * SHA-512: 7ea238d8fc532d3a9f689c8d74de747cc70abb1163aeefb94d758c4fec04a15c4b4f5fb8a204801abd20937a2b974002981cf75a2ac2f6823dd87e9025c2dd1c
 ---
 ### Detection Ratio
-<img src="ratio.png">
+<img src="ratio.png"/>
 ---
 <pre>
 Encrypts your binary file and embeds them to a Crypto file dropper to bypass detection.
