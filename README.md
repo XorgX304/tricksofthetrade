@@ -2,12 +2,11 @@
 ### <i>Crypto File Dropper to bypass file detection.</i>
 ---
 ##### <b>Developed by <i>TRAGENALPHA</i></b> <img src="https://raw.githubusercontent.com/tragenalpha/tragenalpha.github.io/master/flare001.png"/>
-###### <bear> Softwares </trap> (c) 2018
+###### beartrap Softwares (c) 2018
 
-##### Software is licensed under the <i><b>dbad Public License</b></i>.
-###### More information: <i><a href="https://www.dbad-license.org/"> https://www.dbad-license.org/</a></i>
+##### Software is licensed under the <i><b>dbad Public License</b></i>. More information: <i><a href="https://www.dbad-license.org/"> https://www.dbad-license.org/</a></i>
 ---
-<font color="red">Disclaimer: This software will not guarantee a FUD status. More information on the Help (--help) context.</font>
+<span style="color:red;"><b>Disclaimer:</b> This software will not guarantee a FUD status. More information on the Help (--help) context.</span>
 ---
 Encrypts your binary file and embeds them to an Crypto file dropper to bypass detection.
  *Arguments that are given to the carrier are passed to the embedded executable
