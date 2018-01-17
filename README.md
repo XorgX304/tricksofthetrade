@@ -1,6 +1,7 @@
 ## Tricks of the Trade - <i>Crypto File Dropper to bypass file detection.</i>
 ---
-##### <b>Developed by TRAGENALPHA</b> <img src="https://raw.githubusercontent.com/tragenalpha/tragenalpha.github.io/master/flare002.png"/> // beartrap Softwares (c) 2018
+##### <b>Developed by TRAGENALPHA</b> <img src="https://raw.githubusercontent.com/tragenalpha/tragenalpha.github.io/master/flare002.png"/>
+###### //beartrap Softwares (c) 2018
 
 ##### Software is licensed under the <i><b>dbad Public License</b></i>. More information: <i><a href="https://www.dbad-license.org/"> https://www.dbad-license.org/</a></i>
 ---
