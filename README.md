@@ -1,13 +1,13 @@
 ## Tricks of the Trade - <i>Crypto File Dropper to bypass file detection.</i>
 ---
-##### <b>Developed by TRAGENALPHA</b> <img src="https://raw.githubusercontent.com/tragenalpha/tragenalpha.github.io/master/flare001.png"/> // beartrap Softwares (c) 2018
+##### <b>Developed by TRAGENALPHA</b> <img src="https://raw.githubusercontent.com/tragenalpha/tragenalpha.github.io/master/flare002.png"/> // beartrap Softwares (c) 2018
 
 ##### Software is licensed under the <i><b>dbad Public License</b></i>. More information: <i><a href="https://www.dbad-license.org/"> https://www.dbad-license.org/</a></i>
 ---
-<span style="color:red;"><b>Disclaimer:</b> This software will not guarantee a FUD status. More information on the Help (--help) context.</span>
+#### <b>Disclaimer:</b> This software will not guarantee a FUD status. More information on the Help (--help) context.</span>
 ---
 <pre>
-Encrypts your binary file and embeds them to an Crypto file dropper to bypass detection.
+Encrypts your binary file and embeds them to a Crypto file dropper to bypass detection.
  *Arguments that are given to the carrier are passed to the embedded executable
  *This will not guarantee a FUD / bypass. The original executable is fully untouched and is later
  dropped and executed. This will mostly be useful to bypass online / network scanners
