@@ -15,11 +15,11 @@
 * software comes bundled with aghanim's scepter provided by a weird pink midget
 
 ---
-### Hash
-MD5: 099ab18787b92d305352cbb283364e10
-SHA-1: 62ac49668b8e1be5451965a8834fe33dca498249
-SHA-256: 837bfc3760ff1fda41ad44c4e4aef7c48fb5c7be1e36428de596e5fde549d88b
-SHA-512: 7ea238d8fc532d3a9f689c8d74de747cc70abb1163aeefb94d758c4fec04a15c4b4f5fb8a204801abd20937a2b974002981cf75a2ac2f6823dd87e9025c2dd1c
+### Hash:
+* MD5: 099ab18787b92d305352cbb283364e10
+* SHA-1: 62ac49668b8e1be5451965a8834fe33dca498249
+* SHA-256: 837bfc3760ff1fda41ad44c4e4aef7c48fb5c7be1e36428de596e5fde549d88b
+* SHA-512: 7ea238d8fc532d3a9f689c8d74de747cc70abb1163aeefb94d758c4fec04a15c4b4f5fb8a204801abd20937a2b974002981cf75a2ac2f6823dd87e9025c2dd1c
 ---
 ### Detection Ratio
 <img src="ratio.png">
