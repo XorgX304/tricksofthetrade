@@ -7,7 +7,7 @@
 
 ##### Software is licensed under the <i><b>dbad Public License</b></i>. More information: <i><a href="https://www.dbad-license.org/"> https://www.dbad-license.org/</a></i>
 ---
-### <b>Disclaimer:</b>
+### <b>Disclaimer & Notes:</b>
 * This software will not guarantee a FUD status.
 * The user is responsible on how this software is used or the intention of use.
 * Arguments that are given to the carrier are passed to the embedded executable
@@ -17,7 +17,7 @@
 * software comes bundled with aghanim's scepter provided by a weird pink midget
 
 ---
-### Hash:
+### Hash (for v1.0):
 * MD5: 099ab18787b92d305352cbb283364e10
 * SHA-1: 62ac49668b8e1be5451965a8834fe33dca498249
 * SHA-256: 837bfc3760ff1fda41ad44c4e4aef7c48fb5c7be1e36428de596e5fde549d88b
